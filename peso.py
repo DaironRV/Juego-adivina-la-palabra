@@ -3,8 +3,6 @@ import math
 nombre = input("como te llamas? ")
 print (nombre) 
 
-
-
 genero = input("¿Cuál es tu género?: ")
 while genero.lower() not in ["hombre", "mujer"]:
     print("Solo existen dos géneros, hombre y mujer.")
@@ -22,15 +20,10 @@ cintura = float(input("te puedes medir y decirme cuanto tienes de cintura: "))
 resultadoGrasaMujer = (cintura/(calculoAltura*math.sqrt(calculoAltura))-18)/calculoAltura
 resultadoGrasaHombre = (calculoPeso-(calculoPeso*0.85) + 28 - (cintura*0.35))/calculoPeso*100 
 resultado = calculoPeso / (calculoAltura**2)
+
 print("tu indice de masa corporal es de: ", resultado)
 resultado2 = (calculoCarboidratos*4)+(calculoProteinar*4)+(calculoGrasas*9)
 print("haz consumido: ", resultado2, "calorias")
-
-# esta funciona como un buen ejempl de mantener algo en un rago establecido
-if 18.5 <= resultado < 24:
-    print("Tu índice de masa corporal es sano")
-else:
-    print("Tu índice de masa corporal no es sano")
 
 
 if genero == "hombre" or genero == "Hombre":
@@ -50,3 +43,10 @@ elif genero == "mujer" or genero == "Mujer":
         print("tienes que aumentar tu porcentaje de grasa")
     elif resultadoGrasaMujer >22:
         print("tienes que bajar tu procentaje de grasa")
+
+
+# esta funciona como un buen ejempl de mantener algo en un rago establecido
+if 18.5 <= resultado < 24:
+    print("Tu índice de masa corporal es sano")
+else:
+    print("Tu índice de masa corporal no es sano")
